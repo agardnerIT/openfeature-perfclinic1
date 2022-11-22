@@ -11,7 +11,7 @@ You will need:
 
 # Gather Dynatrace Details
 1. Make a note of your Dynatrace environment URL (e.g. `https://abc12345.live.dynatrace` without the trailing slash)
-2. Create a new Access Token with the following permissions: `settings.write`
+2. Create a new Access Token with the following permissions: `settings.write`, `Create and read synthetic monitors, locations, and nodes`
 
 # Clone Repository
 Clone this repository to the Linux VM:
