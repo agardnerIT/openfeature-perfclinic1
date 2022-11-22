@@ -6,8 +6,8 @@ This repo is the companion to [this video](https://www.youtube.com/watch?v=efP2A
 
 You will need:
 
-- A Linux VM with `docker` and `docker compose` installed
-- A Dynatrace environment (https://dynatrace.com/trial)
+- A Linux VM with [docker](https://docs.docker.com/engine/install/) and [docker compose](https://docs.docker.com/compose/install/linux/) installed
+- A Dynatrace environment ([sign up for a free trial](https://dynatrace.com/trial))
 
 # Gather Dynatrace Details
 1. Make a note of your Dynatrace environment URL (e.g. `https://abc12345.live.dynatrace` without the trailing slash)
@@ -39,6 +39,8 @@ Tell Dynatrace to automatically capture and store the values.
 chmod +x ~/openfeature-perfclinic1/scripts/trackSpanAttributes.sh
 ~/openfeature-perfclinic1/scripts/trackSpanAttributes.sh $DT_ENVIRONMENT $DT_TOKEN
 ```
+
+Note: you may receive `401` responses if some / all of those span attributes are already monitored. That's OK, just proceed.
 
 # Install OneAgent
 Install a FullStack OneAgent. Go to your environment and click on "Deploy Dynatrace" > "Start Installation" > "Linux".
