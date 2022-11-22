@@ -26,7 +26,7 @@ cd ~/openfeature-perfclinic1
 
 Modify the following with your details and run:
 ```
-DT_ENVIRONMENT=https://abc12345.live.dynatrace.com
+DT_ENVIRONMENT=https://abc12345.live.dynatrace.com # Note: without trailing slash
 DT_TOKEN=dtc01.*****.*****
 ```
 
