@@ -5,3 +5,11 @@
 
 # Track OTEL span attributes
 # TODO
+# feature-flag.provider_name
+# feature_flag.evaluated_variant
+# feature_flag.flag_key
+curl -X POST "$DT_ENVIRONMENT/api/v2/settings/objects" \
+-H "accept: application/json; charset=utf-8" \
+-H "Authorization: Api-Token $DT_TOKEN" \
+-H "Content-Type: application/json; charset=utf-8" \
+-d "[{\"schemaVersion\":\"0.0.28\",\"schemaId\":\"builtin:span-attribute\",\"scope\":\"environment\",\"value\":{\"key\":\"feature-flag.provider_name\",\"masking\":\"NOT_MASKED\"}},{\"schemaVersion\":\"0.0.28\",\"schemaId\":\"builtin:span-attribute\",\"scope\":\"environment\",\"value\":{\"key\":\"feature_flag.evaluated_variant\",\"masking\":\"NOT_MASKED\"}},{\"schemaVersion\":\"0.0.28\",\"schemaId\":\"builtin:span-attribute\",\"scope\":\"environment\",\"value\":{\"key\":\"feature_flag.flag_key\",\"masking\":\"NOT_MASKED\"}}]"
