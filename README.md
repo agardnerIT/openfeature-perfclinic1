@@ -35,9 +35,9 @@ export VM_IP=1.2.3.4
 ## Why do the above details have to be set?
 These variables are used later by Monaco to parameterise your Dynatrace configuration.
 
-`DT_ENVIRONMENT` and `DT_TOKEN` are used to know where Monaco should apply the config (i.e. Which DT environment)
-`EMAIL_ADDRESS` is used so that the Dynatrace dashboard created is owned by (and visible to) you, when you log in to DT
-`VM_IP` is used to set the application detection rule so [RUM data](https://www.dynatrace.com/support/help/how-to-use-dynatrace/real-user-monitoring) is routed to the correct DT application
+- `DT_ENVIRONMENT` and `DT_TOKEN` are used to know where Monaco should apply the config (i.e. Which DT environment)
+- `EMAIL_ADDRESS` is used so that the Dynatrace dashboard created is owned by (and visible to) you, when you log in to DT
+- `VM_IP` is used to set the application detection rule so [RUM data](https://www.dynatrace.com/support/help/how-to-use-dynatrace/real-user-monitoring) is routed to the correct DT application
 
 
 # Monitor Span Attributes
