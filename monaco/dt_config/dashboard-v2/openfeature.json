@@ -3,7 +3,7 @@
   "dashboardFilter": null,
   "hasConsistentColors": false,
   "name": "{{ .name }}",
-  "owner": "{{ .ownerEmail }}",
+  "owner": "opensource@dynatrace.com",
   "popularity": 10,
   "preset": true,
   "shared": true,

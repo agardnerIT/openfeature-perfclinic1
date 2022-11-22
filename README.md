@@ -28,7 +28,6 @@ Modify the following with your details and run:
 ```
 export DT_ENVIRONMENT=https://abc12345.live.dynatrace.com # Note: without trailing slash
 export DT_TOKEN=dtc01.*****.*****
-export EMAIL_ADDRESS=you@example.com # Use the same email you use for Dynatrace
 export VM_IP=1.2.3.4
 ```
 
@@ -36,7 +35,6 @@ export VM_IP=1.2.3.4
 These variables are used later by Monaco to parameterise your Dynatrace configuration.
 
 - `DT_ENVIRONMENT` and `DT_TOKEN` are used to know where Monaco should apply the config (i.e. Which DT environment)
-- `EMAIL_ADDRESS` is used so that the Dynatrace dashboard created is owned by (and visible to) you, when you log in to DT
 - `VM_IP` is used to set the application detection rule so [RUM data](https://www.dynatrace.com/support/help/how-to-use-dynatrace/real-user-monitoring) is routed to the correct DT application
 
 
@@ -85,4 +83,8 @@ chmod +x monaco
 export NEW_CLI=1
 ./monaco deploy -e environments.yaml
 ```
+
+# View Data in Dynatrace
+
+Go to "Dashboards" and look for "OpenFeature Dashboard"
 

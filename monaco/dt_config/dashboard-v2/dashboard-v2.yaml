@@ -3,4 +3,3 @@ config:
 
 openfeature:
 - name: "OpenFeature Dashboard"
-- ownerEmail: "{{ .Env.EMAIL_ADDRESS }}"
