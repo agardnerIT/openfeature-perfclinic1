@@ -1,0 +1,6 @@
+config:
+- openfeature: openfeature.json
+
+openfeature:
+- name: "OpenFeature"
+- pattern: "1.2.3.4"

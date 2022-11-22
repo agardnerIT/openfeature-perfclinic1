@@ -1,0 +1,113 @@
+{
+ "anomalyDetection": {
+  "loadingTimeThresholds": {
+   "enabled": true,
+   "thresholds": []
+  },
+  "outageHandling": {
+   "globalOutage": true,
+   "globalOutagePolicy": {
+    "consecutiveRuns": 1
+   },
+   "localOutage": false,
+   "localOutagePolicy": {
+    "affectedLocations": null,
+    "consecutiveRuns": null
+   },
+   "retryOnError": true
+  }
+ },
+ "automaticallyAssignedApps": [],
+ "createdFrom": "GUI",
+ "enabled": true,
+ "events": [],
+ "frequencyMin": 5,
+ "keyPerformanceMetrics": {
+  "loadActionKpm": "VISUALLY_COMPLETE",
+  "xhrActionKpm": "VISUALLY_COMPLETE"
+ },
+ "locations": [
+  "GEOLOCATION-A437CC152B23F30C",
+  "GEOLOCATION-E01B833216FC3598"
+ ],
+ "managementZones": [
+  {
+   "id": "4445436166186942093",
+   "name": "openfeature"
+  }
+ ],
+ "manuallyAssignedApps": [],
+ "name": "{{.name}}",
+ "script": {
+  "configuration": {
+   "chromiumStartupFlags": {
+    "disable-web-security": false
+   },
+   "device": {
+    "deviceName": "Desktop",
+    "orientation": "landscape"
+   }
+  },
+  "events": [
+   {
+    "description": "Loading of OpenFeature Homepage",
+    "type": "navigate",
+    "url": "http://34.200.228.83:30000/",
+    "validate": [
+     {
+      "failIfFound": false,
+      "isRegex": false,
+      "match": "Login",
+      "type": "text_match"
+     }
+    ],
+    "wait": {
+     "waitFor": "page_complete"
+    }
+   },
+   {
+    "button": 0,
+    "description": "click on \"∑\"",
+    "target": {
+     "locators": [
+      {
+       "type": "css",
+       "value": "div:contains(\"∑\"):eq(5)"
+      },
+      {
+       "type": "css",
+       "value": "#root div div:nth-child(3) div div:nth-child(2) div:nth-child(2)"
+      },
+      {
+       "type": "css",
+       "value": "#root div div div.MuiPaper-root div div:eq(2)"
+      }
+     ]
+    },
+    "type": "click",
+    "validate": [
+     {
+      "failIfFound": false,
+      "isRegex": false,
+      "match": "63245986",
+      "type": "text_match"
+     }
+    ],
+    "wait": {
+     "waitFor": "network"
+    }
+   }
+  ],
+  "type": "clickpath",
+  "version": "1.0"
+ },
+ "tags": [
+  {
+   "context": "CONTEXTLESS",
+   "key": "app",
+   "source": "RULE_BASED",
+   "value": "openfeature-demo"
+  }
+ ],
+ "type": "BROWSER"
+}

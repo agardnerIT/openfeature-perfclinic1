@@ -1,0 +1,7 @@
+config:
+- OpenFeatureDefault: OpenFeatureDefault.json
+- OpenFeatureLoggedIn: OpenFeatureLoggedIn.json
+OpenFeatureDefault:
+- name: OpenFeature Default
+OpenFeatureLoggedIn:
+- name: OpenFeature Logged In
