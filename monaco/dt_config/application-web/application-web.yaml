@@ -2,6 +2,6 @@ config:
 - OpenFeature: OpenFeature.json
 OpenFeature:
 - name: OpenFeature
-- feature_flag_evaluated_variant_ssra: "dt_config/request-attributes/featureflagevaluatedvariant"
-- feature_flag_flag_key_ssra: "dt_config/request-attributes/featureflagflagkey"
-- feature_flag_provider_name_ssra: "dt_config/request-attributes/featureflagprovidername"
+- feature_flag_evaluated_variant_ssra: "dt_config/request-attributes/featureflagevaluatedvariant.id"
+- feature_flag_flag_key_ssra: "dt_config/request-attributes/featureflagflagkey.id"
+- feature_flag_provider_name_ssra: "dt_config/request-attributes/featureflagprovidername.id"

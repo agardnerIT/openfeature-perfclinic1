@@ -3,4 +3,5 @@ config:
 
 openfeature:
 - name: "OpenFeature"
-- pattern: "1.2.3.4"
+- pattern: "{{ .Env.VM_IP }}"
+- appid: "dt_config/application-web/OpenFeature.id"

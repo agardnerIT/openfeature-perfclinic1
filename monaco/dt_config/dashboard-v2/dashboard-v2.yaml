@@ -1,6 +1,6 @@
 config:
-- openfeature.json
+- openfeature: openfeature.json
 
 openfeature:
-- name: "OpenFeature Dashboard2"
-- ownerEmail: "you@example.com"
+- name: "OpenFeature Dashboard"
+- ownerEmail: "{{ .Env.EMAIL_ADDRESS }}"

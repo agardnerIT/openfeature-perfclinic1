@@ -11,7 +11,7 @@ You will need:
 
 # Gather Dynatrace Details
 1. Make a note of your Dynatrace environment URL (e.g. `https://abc12345.live.dynatrace` without the trailing slash)
-2. Create a new Access Token with the following permissions: `settings.write`, `Create and read synthetic monitors, locations, and nodes`
+2. Create a new Access Token with the following permissions: `ReadConfig`, `WriteConfig`, `settings.write`, `Create and read synthetic monitors, locations, and nodes`, `CaptureRequestData`
 
 # Clone Repository
 Clone this repository to the Linux VM:
@@ -28,7 +28,17 @@ Modify the following with your details and run:
 ```
 export DT_ENVIRONMENT=https://abc12345.live.dynatrace.com # Note: without trailing slash
 export DT_TOKEN=dtc01.*****.*****
+export EMAIL_ADDRESS=you@example.com # Use the same email you use for Dynatrace
+export VM_IP=1.2.3.4
 ```
+
+## Why do the above details have to be set?
+These variables are used later by Monaco to parameterise your Dynatrace configuration.
+
+`DT_ENVIRONMENT` and `DT_TOKEN` are used to know where Monaco should apply the config (i.e. Which DT environment)
+`EMAIL_ADDRESS` is used so that the Dynatrace dashboard created is owned by (and visible to) you, when you log in to DT
+`VM_IP` is used to set the application detection rule so [RUM data](https://www.dynatrace.com/support/help/how-to-use-dynatrace/real-user-monitoring) is routed to the correct DT application
+
 
 # Monitor Span Attributes
 The OpenFeature demo contains 3 important span attributes.

@@ -1,5 +1,16 @@
 {
  "conditions": [
+    {
+        "attribute": "SERVICE_DISPLAY_NAME",
+        "comparisonInfo": {
+            "type": "FAST_STRING",
+            "comparison": "CONTAINS",
+            "value": "openfeature",
+            "values": null,
+            "negate": false,
+            "caseSensitive": false
+        }
+    },
   {
    "attribute": "SERVICE_REQUEST_ATTRIBUTE",
    "comparisonInfo": {
