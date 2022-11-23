@@ -92,11 +92,8 @@ Go to "Dashboards" and look for "OpenFeature Dashboard". In a few moments, you s
 
 Modify the flags in the demo system `http://VM_IP:30000` and the dashboard should automatically track and report your changes.
 
-Visit the dashboard links to drill into the OpenTelemetry traces
-
 # FAQ
 
 ## Would This Work Without OneAgent?
 
 Yes, OpenTelemetry traces can be ingested into Dynatrace.
-
