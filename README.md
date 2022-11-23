@@ -99,3 +99,9 @@ Go to "Dashboards" and look for "OpenFeature Dashboard". In a few moments, you s
 ![](assets/dt_dashboard.png)
 
 Modify the flags in the demo system `http://VM_IP:30000` and the dashboard should automatically track and report your changes.
+
+# Problems or Issues?
+
+Please create an Issue and
+
+Maintained by [Adam Gardner](https://www.linkedin.com/in/agardner1/)
