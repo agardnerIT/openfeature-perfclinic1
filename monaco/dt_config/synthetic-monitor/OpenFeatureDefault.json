@@ -27,13 +27,13 @@
   "xhrActionKpm": "VISUALLY_COMPLETE"
  },
  "locations": [
-  "GEOLOCATION-A437CC152B23F30C",
-  "GEOLOCATION-E01B833216FC3598"
+  "GEOLOCATION-195845BAEB760941",
+  "GEOLOCATION-D3F66706B8A0D641"
  ],
  "managementZones": [
   {
-   "id": "4445436166186942093",
-   "name": "openfeature"
+   "id": "{{ .managementZoneID }}",
+   "name": "{{ .managementZoneName }}"
   }
  ],
  "manuallyAssignedApps": [],
@@ -52,7 +52,7 @@
    {
     "description": "Loading of OpenFeature Homepage",
     "type": "navigate",
-    "url": "http://34.200.228.83:30000/",
+    "url": "http://{{ .vm_ip_and_port }}",
     "validate": [
      {
       "failIfFound": false,

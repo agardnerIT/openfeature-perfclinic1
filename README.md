@@ -51,7 +51,7 @@ chmod +x ~/openfeature-perfclinic1/scripts/trackSpanAttributes.sh
 Note: you may receive `401` responses if some / all of those span attributes are already monitored. That's OK, just proceed.
 
 # Install OneAgent
-Install a FullStack OneAgent. Go to your environment and click on "Deploy Dynatrace" > "Start Installation" > "Linux".
+Install a FullStack OneAgent: Go to your environment and click on "Deploy Dynatrace" > "Start Installation" > "Linux".
 
 Best practice: Always set a host group. For example: `openfeature-demo`
 
@@ -84,6 +84,14 @@ export NEW_CLI=1
 ./monaco deploy -e environments.yaml
 ```
 
+This will automatically create the following pieces of configuration:
+
+- An application & detection rules
+- Auto tagging rules
+- Calculate service metrics and request attributes based on the span attribute values capture from OpenTelemetry
+- A management zone
+- 2x synthetic monitors
+
 # View Data in Dynatrace
 
 Go to "Dashboards" and look for "OpenFeature Dashboard". In a few moments, you should see data flowing into the system (some tiles will be blank - that's OK).
@@ -91,9 +99,3 @@ Go to "Dashboards" and look for "OpenFeature Dashboard". In a few moments, you s
 ![](assets/dt_dashboard.png)
 
 Modify the flags in the demo system `http://VM_IP:30000` and the dashboard should automatically track and report your changes.
-
-# FAQ
-
-## Would This Work Without OneAgent?
-
-Yes, OpenTelemetry traces can be ingested into Dynatrace.
